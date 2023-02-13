@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.vveral.demo.dto.UsuarioRegistrado;
 import com.vveral.demo.entity.Usuario;
 import com.vveral.demo.service.IUsuarioService;
 
@@ -33,7 +34,7 @@ public class UsuarioController {
 
 	@PostMapping
 	public ResponseEntity<Object> guardarUsuario(@RequestBody Usuario usuario) {
-		Object respuesta = usuarioServicio.guardarUsuario(usuario);			
+		UsuarioRegistrado respuesta = usuarioServicio.guardarUsuario(usuario);			
 		return new ResponseEntity<Object> (respuesta, HttpStatus.OK);
 	}
 	

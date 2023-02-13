@@ -27,8 +27,8 @@ public class UsuarioService implements IUsuarioService {
 	}
 
 	@Override
-	public Object guardarUsuario(Usuario usuario) {
-		Object valor = repositorioUsuario.findByEmail("Vveralop@hotmail.com");
+	public UsuarioRegistrado guardarUsuario(Usuario usuario) {
+		Usuario valor = repositorioUsuario.findByEmail(usuario.getEmail());
 		if (valor != null) {
 			throw new RuntimeException("El correo ya esta registrado");
 		}

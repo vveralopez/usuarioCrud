@@ -9,6 +9,6 @@ import com.vveral.demo.entity.Usuario;
 public interface IUsuarioRepository extends JpaRepository<Usuario, Long>{
 
 	@Transactional(readOnly = true)
-	public Object findByEmail(String email);
+	public Usuario findByEmail(String email);
 	
 }
