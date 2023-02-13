@@ -33,9 +33,7 @@ public class UsuarioController {
 
 	@PostMapping
 	public ResponseEntity<Object> guardarUsuario(@RequestBody Usuario usuario) {
-		Object respuesta = usuarioServicio.guardarUsuario(usuario);	
-		System.out.println("Valor respuesta: " + respuesta);
-		
+		Object respuesta = usuarioServicio.guardarUsuario(usuario);			
 		return new ResponseEntity<Object> (respuesta, HttpStatus.OK);
 	}
 	
